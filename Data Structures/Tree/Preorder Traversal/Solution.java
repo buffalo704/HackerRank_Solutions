@@ -30,12 +30,11 @@ class Solution {
     public static void preOrder(Node root) {
         System.out.print(root.data + " ");
 
-        if (root.left != null && root.right != null) {
+        if (root.left !=null) {
             preOrder(root.left);
-            preOrder(root.right);
-        } else if (root.left != null) {
-            preOrder(root.left);
-        } else if (root.right != null) {
+        }
+
+        if (root.right != null) {
             preOrder(root.right);
         }
 
