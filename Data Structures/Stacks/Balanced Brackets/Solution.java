@@ -22,7 +22,10 @@ public class Solution {
                 deque.push(']');
             } else if (ch == '(') {
                 deque.push(')');
-            } else if (!deque.isEmpty() && ch != deque.pop()) {
+            } else if (!deque.isEmpty()
+                    && ch == deque.peek()) {
+                deque.pop();
+            } else {
                 return "NO";
             }
         }
